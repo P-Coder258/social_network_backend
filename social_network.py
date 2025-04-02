@@ -95,4 +95,5 @@ class SocialNetwork:
         comment = self.comments[post_id][comment_index]
         if username in comment['likes']:
             return False  # User has already liked this comment
-        comment['
+        comment['likes'].add(username)
+        return True
